@@ -1,0 +1,22 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ page_title|capfirst }}</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+<div class="navmenu">
+
+    <ul>
+        <li><a href="{% url 'main:index' %}" class="">Главная</a></li>
+        <li><a href="{% url 'main:about_us' %}" class="">О нас</a></li>
+        <li style="float: right;"><a href="{% url 'main:login' %}">Войти</a></li>
+    </ul>
+
+</div>
+{% block content %}
+{% endblock %}
+</body>
+</html>
